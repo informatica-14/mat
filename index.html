@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="CursosInformatica">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Smile | Matemáticas</title>
+    <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./css/main.css">
+  </head>
+  <body>
+    <header class="Main">
+      <h1 class="Main-title">Matemáticas</h1>
+    </header>
+    <div class="wrap" ng-controller="TabsController as tabs">
+      <div class="InfoContent" ng-show="tabs.tab === 1">
+        <div class="InfoContent-title">Formación Básica</div>
+      </div>
+      <section class="BasicContent" ng-show="tabs.tab === 1">
+        <img src="./images/1.jpg" alt="html" class="BasicContent-image">
+        <p class="BasicContent-Description">Matemáticas 1 <span class="u-hide">Mat 1</span></p>
+        <a href="#/" class="BasicContent-link is-hide" ng-click="tabs.selectTab(6)">Comenzar</a>
+        <a href="#/" class="BasicContent-link show" ng-click="tabs.selectTab(6)">Comenzar</a>
+      </section>
+      <section class="BasicContent" ng-show="tabs.tab === 1">
+        <img src="./images/2.jpg" alt="html" class="BasicContent-image">
+        <p class="BasicContent-Description">Matemáticas 2 <span class="u-hide">Mat 2</span></p>
+        <a href="#/" class="BasicContent-link is-hide" ng-click="tabs.selectTab(6)">Comenzar</a>
+        <a href="#/" class="BasicContent-link show" ng-click="tabs.selectTab(6)">Comenzar</a>
+      </section>
+      <section class="BasicContent" ng-show="tabs.tab === 1">
+        <img src="./images/3.jpg" alt="html" class="BasicContent-image">
+        <p class="BasicContent-Description">Matemáticas 3 <span class="u-hide">Mat 3</span></p>
+        <a href="#/" class="BasicContent-link is-hide" ng-click="tabs.selectTab(6)">Comenzar</a>
+        <a href="#/" class="BasicContent-link show" ng-click="tabs.selectTab(6)">Comenzar</a>
+      </section>
+      <section class="BasicContent" ng-show="tabs.tab === 1">
+        <img src="./images/4.jpg" alt="html" class="BasicContent-image">
+        <p class="BasicContent-Description">Matemáticas 4 <span class="u-hide">Mat 4</span></p>
+        <a href="#/" class="BasicContent-link is-hide" ng-click="tabs.selectTab(6)">Comenzar</a>
+        <a href="#/" class="BasicContent-link show" ng-click="tabs.selectTab(6)">Comenzar</a>
+      </section>
+      <section class="BasicContent" ng-show="tabs.tab === 1">
+        <img src="./images/5.jpg" alt="html" class="BasicContent-image">
+        <p class="BasicContent-Description">Matemáticas 5 <span class="u-hide">Mat 5</span></p>
+        <a href="#/" class="BasicContent-link is-hide" ng-click="tabs.selectTab(6)">Comenzar</a>
+        <a href="#/" class="BasicContent-link show" ng-click="tabs.selectTab(6)">Comenzar</a>
+      </section>
+      <section class="BasicContent" ng-show="tabs.tab === 1">
+        <img src="./images/6.jpg" alt="html" class="BasicContent-image">
+        <p class="BasicContent-Description">Matemáticas 6 <span class="u-hide">Mat 6</span></p>
+        <a href="#/" class="BasicContent-link is-hide" ng-click="tabs.selectTab(6)">Comenzar</a>
+        <a href="#/" class="BasicContent-link show" ng-click="tabs.selectTab(6)">Comenzar</a>
+      </section>
+      <div class="Accordion" ng-show="tabs.tab === 4" ng-controller="ControllerGuias as guiashtml">
+        <div class="Accordion-wrap" ng-repeat="html in guiashtml.guias.name">
+          <h2 class="Accordion-link">{{ guiashtml.guias.html }} - {{ html | uppercase }}</h2>
+          <img src="./images/html/html-tel/{{html}}.jpg" alt="" class="Accordion-image">
+        </div>
+        <a href="#/" class="Accordion-back" ng-click="tabs.selectTab(1)">Regresar</a>  
+      </div>
+     	<div class="Accordion" ng-show="tabs.tab === 5" ng-controller="ControllerGuias as guiashtml">
+        <div class="Accordion-wrap" ng-repeat="css in guiashtml.guias.namecss">
+          <h2 class="Accordion-link">{{ guiashtml.guias.css }} - {{ css | uppercase }}</h2>
+          <img src="./images/css/css-tel/{{css}}.jpg" alt="" class="Accordion-image">
+        </div>
+        <a href="#/" class="Accordion-back" ng-click="tabs.selectTab(1)">Regresar</a>  
+      </div>
+      <div class="Accordion" ng-show="tabs.tab === 7" ng-controller="ControllerGuias as guiashtml">
+        <div class="Accordion-wrap" ng-repeat="html in guiashtml.guias.namedt">
+          <h2 class="Accordion-link">{{ guiashtml.guias.html }} - {{ html | uppercase }}</h2>
+          <img src="./images/html/html-dt/{{html}}.jpg" alt="" class="Accordion-image">
+        </div>
+        <a href="#/" class="Accordion-back" ng-click="tabs.selectTab(1)">Regresar</a>  
+      </div>
+      <div class="Accordion" ng-show="tabs.tab === 8" ng-controller="ControllerGuias as guiashtml">
+        <div class="Accordion-wrap" ng-repeat="css in guiashtml.guias.namecssdt">
+          <h2 class="Accordion-link">{{ guiashtml.guias.css }} - {{ css | uppercase }}</h2>
+          <img src="./images/css/css-dt/{{css}}.jpg" alt="" class="Accordion-image">
+        </div>
+        <a href="#/" class="Accordion-back" ng-click="tabs.selectTab(1)">Regresar</a>  
+      </div>
+      <div class="Accordion" ng-show="tabs.tab === 6">
+        <div class="Accordion-wrap">
+          <h2 class="Accordion-link">Guias en construcción</h2>
+        </div>
+        <a href="#/" class="Accordion-back" ng-click="tabs.selectTab(1)">Regresar</a>  
+      </div>
+    </div>
+  </body>
+  <script src="./js/main.js"></script>
+</html>
